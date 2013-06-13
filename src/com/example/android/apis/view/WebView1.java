@@ -42,6 +42,6 @@ public class WebView1 extends Activity {
         wv = (WebView) findViewById(R.id.wv1);
         wv.getSettings().setJavaScriptEnabled(true);
         wv.setWebChromeClient(new WebChromeClient());
-        wv.loadUrl("http://www.google.com/mobile/");
+        wv.loadUrl("http://www.google.com");
     }
 }
