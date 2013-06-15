@@ -23,25 +23,24 @@ import android.webkit.WebView;
 
 import com.example.android.apis.R;
 
-
 /**
  * Sample creating 10 webviews.
  */
 public class WebView1 extends Activity {
-    
-    @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
-        
-        setContentView(R.layout.webview_1);
-        
-        final String mimeType = "text/html";
-        
-        WebView wv;
-        
-        wv = (WebView) findViewById(R.id.wv1);
-        wv.getSettings().setJavaScriptEnabled(true);
-        wv.setWebChromeClient(new WebChromeClient());
-        wv.loadUrl("http://www.google.com");
-    }
+
+	@Override
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+
+		setContentView(R.layout.webview_1);
+
+		final String mimeType = "text/html";
+
+		WebView wv;
+
+		wv = (WebView) findViewById(R.id.wv1);
+		wv.getSettings().setJavaScriptEnabled(true);
+		wv.setWebChromeClient(new WebChromeClient());
+		wv.loadUrl("file:///android_asset/index.html");
+	}
 }
